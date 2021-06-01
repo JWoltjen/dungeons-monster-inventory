@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import {BrowserRouter, Route, Link} from 'react-router-dom'; 
 import './App.css';
+import Nav from './components/Nav'
+import MonsterList from './components/MonsterList'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav /> 
+      <form className='search-form'>
+        <input className='search-bar' placeholder='input monster' type="text" />
+        <button className='search-button' type='submit'>
+          Search
+        </button>
+      </form>
+      <MonsterList />
     </div>
   );
 }
