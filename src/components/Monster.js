@@ -11,5 +11,5 @@ function Monster() {
         </div>
     )
 }
-
+ 
 export default Monster

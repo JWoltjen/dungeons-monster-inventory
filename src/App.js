@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'; 
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import './App.css';
 import Nav from './components/Nav'
 import Home from './components/Home'
@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Nav /> 
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" component={Home}/>
           <Route  path="/savedmonsters" component={SavedMonsters}/>
           <Route path="/killedmonsters" component={KilledMonsters}/>
         </Switch>
