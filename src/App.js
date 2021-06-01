@@ -1,21 +1,27 @@
-import {BrowserRouter, Route, Link} from 'react-router-dom'; 
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 import './App.css';
 import Nav from './components/Nav'
-import MonsterList from './components/MonsterList'
-
+import Home from './components/Home'
+import SavedMonsters from './components/SavedMonsters'
+import KilledMonsters from './components/KilledMonsters'
+import Footer from './components/Footer'
 
 function App() {
+
   return (
-    <div className="App">
-      <Nav /> 
-      <form className='search-form'>
-        <input className='search-bar' placeholder='input monster' type="text" />
-        <button className='search-button' type='submit'>
-          Search
-        </button>
-      </form>
-      <MonsterList />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav /> 
+        <Switch>
+          <Route path="/" component={Home}/>
+          <Route  path="/savedmonsters" component={SavedMonsters}/>
+          <Route path="/killedmonsters" component={KilledMonsters}/>
+        </Switch>
+         <Footer/>
+      </div>
+    </Router>
+   
   );
 }
 
