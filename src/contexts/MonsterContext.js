@@ -4,7 +4,7 @@ export const MonsterContext = createContext();
 
 export const MonsterProvider = () => {
     const [monsters, setMonsters] = useState({
-        
+
     })
 }
 
