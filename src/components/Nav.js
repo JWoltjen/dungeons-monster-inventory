@@ -6,7 +6,7 @@ function Nav() {
             <h3>
                 Logo
             </h3>
-            <ul>
+            <ul className="nav-links">
                 <li>
                     Saved Monsters
                 </li>
