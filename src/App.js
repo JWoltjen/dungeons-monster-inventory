@@ -2,24 +2,12 @@ import React, {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'; 
 import './App.css';
 import Nav from './components/Nav'
-import MonsterList from './components/MonsterList'
+import Home from './components/Home'
 import SavedMonsters from './components/SavedMonsters'
 import KilledMonsters from './components/KilledMonsters'
-import axios from 'axios';
-
-
 
 function App() {
 
-  useEffect(() => {
-    getMonsters()
-  }, [])
-
-  const getMonsters = async () => {
-    const response = await fetch(`https://www.dnd5eapi.co/api/monsters`)
-    const data = await response.json(); 
-    console.log(data)
-  }
   return (
     <Router>
       <div className="App">
@@ -34,15 +22,4 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div>
-     <form className='search-form'>
-          <input className='search-bar' placeholder='input monster' type="text" />
-          <button className='search-button' type='submit'>
-            Search
-          </button>
-        </form>
-        <MonsterList />
-  </div>
-)
 export default App;

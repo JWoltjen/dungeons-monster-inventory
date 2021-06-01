@@ -21,6 +21,11 @@ function Nav() {
                         Killed Monsters
                     </li>
                 </Link>
+                <Link style={navStyle} to='/'>
+                    <li>
+                        Home
+                    </li>
+                </Link>
                 <li style={navStyle}>
                     Monster Kill Count
                 </li>
